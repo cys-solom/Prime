@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #1a5f7a;
+  --primary-dark: #0f4c64;
+}
+
+@layer base {
+  body {
+    @apply text-gray-900 dark:text-white;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-2 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors;
+  }
+  
+  .input-primary {
+    @apply px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-primary;
+  }
+}
+
+/* RTL Support */
+[dir="rtl"] .space-x-8 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}
+
+[dir="rtl"] .space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+} 
